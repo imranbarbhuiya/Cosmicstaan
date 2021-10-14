@@ -109,9 +109,10 @@ class Blog extends StatelessWidget {
           ),
           PopupMenuButton<Text>(itemBuilder: (context) {
             return [
-              const PopupMenuItem(child: Text("1st Category")),
-              const PopupMenuItem(child: Text("2nd Category")),
-              const PopupMenuItem(child: Text("3rd Category"))
+              const PopupMenuItem(child: Text("Latest")),
+              const PopupMenuItem(child: Text("Biology in Space")),
+              const PopupMenuItem(child: Text("New Discoveries")),
+              const PopupMenuItem(child: Text("Space Equipments"))
             ];
           })
         ],
@@ -509,7 +510,7 @@ and the cosmos started when she helped her sister build a model solar system in 
 library. Doris also likes learning new ways to prepare the basil sitting on her windowsill.
 Follow her on twitter at @salazar_elin."""),
       const Article(
-          assetName: 'images/4th.jpg',
+          assetName: 'images/4th.webp',
           title:
               "After 3.5 million-year hiatus, the largest comet ever discovered is headed our way",
           description:
@@ -1460,7 +1461,7 @@ class BlogItem extends StatelessWidget {
   }) : super(key: key);
 
   // This height will allow for all the Card's content to fit comfortably within the card.
-  static const height = 298.0;
+  static const height = 250.0;
   final Article article;
 
   @override
@@ -1534,7 +1535,6 @@ class BlogContent extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final titleStyle = theme.textTheme.headline5!.copyWith(color: Colors.white);
-    final descriptionStyle = theme.textTheme.subtitle1;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1568,28 +1568,17 @@ class BlogContent extends StatelessWidget {
             ],
           ),
         ),
-        // Description and share/explore buttons.
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-          child: DefaultTextStyle(
-            softWrap: false,
-            overflow: TextOverflow.ellipsis,
-            style: descriptionStyle!.copyWith(color: Colors.black54),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: Text(
-                    article.description,
-                    style: descriptionStyle.copyWith(color: Colors.black54),
-                  ),
-                ),
-              ],
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                article.description,
+              ),
+            ],
           ),
         ),
-        // share, explore buttons
       ],
     );
   }
@@ -1649,7 +1638,7 @@ class _BlogPageState extends State<BlogPage> {
                     ),
                   ),
                 ),
-                Image.asset('images/space.jpg'),
+                Image.asset(widget.article.assetName),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
