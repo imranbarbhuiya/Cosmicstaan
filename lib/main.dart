@@ -1110,7 +1110,7 @@ Belgium and the island country of Malta's first­ever contribution to the ISS: p
 the microbes inside the skin of foot ulcers.
 """),
       const Article(
-          assetName: 'images/13th.jpg',
+          assetName: 'images/13th.webp',
           title: "A space fan's guide to New York Comic Con 2021",
           description: "Many of this year's events will be held in person.",
           content:
@@ -1766,7 +1766,7 @@ class Quizes extends StatelessWidget {
                 child: const Padding(
                     padding: EdgeInsets.all(16),
                     child: Text(
-                      "Restart",
+                      "Home",
                       style: TextStyle(fontSize: 20),
                     )),
                 onTap: () {
@@ -1836,7 +1836,7 @@ class _QuizPageState extends State<QuizPage> {
           buttons: [
             DialogButton(
               child: const Text(
-                "Back",
+                "Restart",
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               onPressed: () {
