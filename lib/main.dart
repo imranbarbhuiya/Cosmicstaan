@@ -690,7 +690,7 @@ magazine, freelanced for a range of publications including Live Science, Space.c
 Professional Engineering, Via Satellite and Space News and served as a maternity cover
 science editor at the European Space Agency."""),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/8th.webp',
           title:
               "Jeff Bezos' Blue Origin faces scathing criticism of safety and culture",
           description:
@@ -875,7 +875,7 @@ not the world we should be creating here on Earth, and certainly not as our
 springboard to a better one."
 """),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/9th.webp',
           title:
               "Air Force's X-37B robotic space plane wings past 500 days in Earth orbit",
           description:
@@ -935,9 +935,9 @@ operations and also conducts on-orbit experimentation and technology
 demonstrations for the U.S. Space Force."
           """),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/10th.webp',
           title:
-              ".Mars was always too small to hold onto its oceans, rivers and lakes",
+              "Mars was always too small to hold onto its oceans, rivers and lakes",
           description:
               "Mars' story may hold a basic truth about planetary habitability. Mars was doomed to desiccation by its small size, a new study suggests.",
           content:
@@ -997,7 +997,7 @@ habitability. Scientists think that modern Mars still supports potentially lifes
 ice-covered surfaces.
           """),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/11th.webp',
           title:
               "NASA's Perseverance rover has taken the 1st steps in decades-long dream of Mars sample return",
           description:
@@ -1082,7 +1082,7 @@ Mars, she emphasized. "Everything we do builds on what we've learned before," Gl
 "We stand on the shoulders of the giants to be where we are today."
           """),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/12th.webp',
           title:
               "Skywatchers see SpaceX's Dragon cargo ship streak across the night sky as it returned to Earth",
           description:
@@ -1100,7 +1100,7 @@ Belgium and the island country of Malta's first­ever contribution to the ISS: p
 the microbes inside the skin of foot ulcers.
 """),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/13th.jpg',
           title: "A space fan's guide to New York Comic Con 2021",
           description: "Many of this year's events will be held in person.",
           content:
@@ -1119,10 +1119,11 @@ To ensure you don't miss a thing, we've scanned the schedule, analyzed the senso
 readings and pulled out the can't-miss panels that you should make your top
 priority. Events will also be shown live on the NYCC YouTube channel."""),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/14th.webp',
           title:
               "Best telescopes 2021: Top picks for beginners, viewing planets, astrophotography and all-arounders",
-          description: "desc",
+          description:
+              "Whatever your budget, experience in astronomy or targets that interest you most, there’s a great telescope out there just for you",
           content:
               """Whatever your budget, experience in astronomy or targets that
 interest you most, there’s a great telescope out there just for you
@@ -1205,10 +1206,10 @@ With a fair-sized aperture and quality optics typical of Celestron products, you
 hard-pressed to find a beginner's telescope as good and easy to use for the same
 price."""),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/15th.jpg',
           title: "8 Cool Destinations That Future Mars Tourists Could Explore",
-          //TODO: Add description
-          description: "Yet to add",
+          description:
+              "Mars is a planet of vast contrasts — huge volcanoes, deep canyons, and craters that may or may not host running water.",
           content:
               """Mars is a planet of vast contrasts — huge volcanoes, deep canyons, and craters that may or
 may not host running water. It will be an amazing location for future tourists to explore,
@@ -1301,7 +1302,7 @@ climatologists some hints as to the ancient environment of the Red Planet. In an
 exciting twist, there could be microbes hiding in the sheltered areas of these dunes, safe 
 from the radiation and wind that would otherwise sweep them away."""),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/16th.jpg',
           title:
               "Super Flower Blood Moon 2021: Where, when and how to see the supermoon lunar eclipse",
           description: "It's the only total lunar eclipse of 2021",
@@ -1417,7 +1418,7 @@ thought demons were attacking. Some cultures, such as the Hupa of northern Calif
 saw the lunar eclipse as an act of injury (hence the blood-red color) and renewal (as the
 moon healed and returned)"""),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/17th.jpg',
           title: "Star Wars movies ranked, worst to best",
           description:
               "From A New Hope to The Rise of Skywalker, here’s all the Star Wars movies ranked, worst to best. Now enjoy the greatest moments from a galaxy far, far away.",
