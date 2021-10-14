@@ -272,7 +272,7 @@ class Article {
 
 List<Article> blogs(BuildContext context) => [
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/1st.webp',
           title:
               "SpaceX's private Inspiration4 crew gets their astronaut wings",
           description:
@@ -288,7 +288,6 @@ Hawthorne, California.
 astronaut Hayley Arceneaux, the mission's medical officer, wrote in a Twitter post
  Saturday. "This beautiful symbol of our journey means everything to me! Also if it
 looks like I'm crying, mind your business." 
-Photos: SpaceX's Inspiration4 mission in pictures
 Yesterday we were presented with our SpaceX astronaut wings. This beautiful symbol 
 of our journey means everything to me! Also if it looks like I’m crying, mind your 
 business 😉😉 pic.twitter.com/3TqMQ91okKOctober 2, 2021
@@ -327,7 +326,7 @@ thanked SpaceX on Saturday for the flight.
 "It was great to see all our SpaceX friends and thank them for making this mission a
 success," Isaacman added on Twitter. "Incredible memories."""),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/2nd.jpg',
           title: "Full Moon Calendar 2021: When to see the next full moon",
           description: "Here are the dates for the full moons in 2021.",
           content:
@@ -476,7 +475,7 @@ Canada, Greenland and Russia.
 The total solar eclipse of 2021 will occur on Dec. 4. It will only be visible in totality
 from Antarctica, with partial views visible from South Africa and the South Atlantic. """),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/3rd.jpg',
           title:
               "Hubble telescope spots celestial 'eye,' a galaxy with an incredibly active core",
           description:
@@ -510,7 +509,7 @@ and the cosmos started when she helped her sister build a model solar system in 
 library. Doris also likes learning new ways to prepare the basil sitting on her windowsill.
 Follow her on twitter at @salazar_elin."""),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/4th.jpg',
           title:
               "After 3.5 million-year hiatus, the largest comet ever discovered is headed our way",
           description:
@@ -561,7 +560,7 @@ Brandon Specktor writes about the science of everyday life for Live Science, and
 for Reader's Digest magazine, where he served as an editor for five years. He grew up in
 the Sonoran Desert, but believes Sonoran hot dogs are trying way too hard."""),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/5th.jpg',
           title:
               "On This Day in Space! Oct. 3, 1942: 1st successful test launch of the German A4 rocket (AKA the V-2)",
           description:
@@ -586,7 +585,7 @@ Seattle, home of the Space Needle, with her cat and two snakes. In her spare tim
 likes to explore the Rocky Mountains, basking in nature and looking for dark skies to gaze
 at the cosmos. """),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/6th.jpg',
           title:
               "Mercury looks stunning in this 1st flyby photo from Europe and Japan's BepiColombo mission",
           description:
@@ -640,7 +639,7 @@ kid and a fifth time as an adult. He has journalism degrees from the University 
 California and New York University. To see his latest project, you can follow Tariq
 on Twitter."""),
       const Article(
-          assetName: 'images/space.jpg',
+          assetName: 'images/7th.webp',
           title:
               "Unstoppable lava from La Palma volcano eruption reaches ocean in stunning space photos",
           description:
