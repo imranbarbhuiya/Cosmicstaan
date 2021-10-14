@@ -12,7 +12,6 @@ class Cosmicstaan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // theme: _buildShrineTheme(),
       home: Scaffold(
         backgroundColor: Colors.grey.shade900,
         body: const SafeArea(
@@ -51,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         icon: Icon(Icons.book_outlined),
       ),
       const BottomNavigationBarItem(
-        label: 'About',
+        label: 'Info',
         icon: Icon(Icons.info_outline),
       ),
     ];
@@ -202,14 +201,14 @@ class Quiz extends StatelessWidget {
   }
 }
 
-class About extends StatelessWidget {
-  const About({Key? key}) : super(key: key);
+class Info extends StatelessWidget {
+  const Info({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("About Me"),
+        title: const Text("Info"),
       ),
       body: Center(
         child: Card(
@@ -258,8 +257,8 @@ class _NavigationDestinationView extends StatelessWidget {
         child: Center(
           child: (item.label == "$Blog")
               ? const Blog()
-              : (item.label == "$About")
-                  ? const About()
+              : (item.label == "$Info")
+                  ? const Info()
                   : const Quiz(),
         ),
       ),
