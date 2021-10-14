@@ -161,17 +161,25 @@ class Quiz extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Padding(
-              padding: EdgeInsets.fromLTRB(0, 16, 0, 16),
+              padding: EdgeInsets.fromLTRB(0, 16, 0, 20),
               child: Text(
-                "Guide",
-                style: TextStyle(fontSize: 20),
+                "Quiz Guide",
+                style: TextStyle(fontSize: 24),
               ),
             ),
             const Text(
-              "Each question will have 4 options",
+              "You'll get a statement",
+              style: TextStyle(fontSize: 20),
             ),
+            const SizedBox(height: 10),
             const Text(
-              "One of them is correct",
+                "Respond to the questions by indicating whether the statement is True or False",
+                style: TextStyle(fontSize: 16),
+                textAlign: TextAlign.center),
+            const SizedBox(height: 10),
+            const Text(
+              "Correct answer will give you +4 points. "
+              "\nAnd wrong answer will give you -2 points",
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -211,19 +219,21 @@ class About extends StatelessWidget {
               ListTile(
                 leading: const CircleAvatar(
                   radius: 30.0,
-                  backgroundImage: AssetImage("images/space.jpg"),
+                  backgroundImage: AssetImage("images/logo.png"),
                   backgroundColor: Colors.transparent,
                 ),
-                title: const Text('Mr. Abrax'),
+                title: const Text('D.A.V International School Amritsar'),
                 subtitle: Text(
-                  'Secondary Text',
+                  'www.davintschool.org',
                   style: TextStyle(color: Colors.black.withOpacity(0.6)),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
-                  'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                  'DAV International School is proud to be the premier educational institution in Amritsar. Established in 1998 and affiliated to CBSE the school offers Science, Commerce and Humanities streams along with vocational courses.'
+                  '  The school today stands tall with 5456 students mentored by 204 dedicated and committed faculty members who follow the most effective result oriented teaching methods. '
+                  'Spread over 8.6 acres of land embellished with lush green lawns and an amazing variety of flora, the school can boast of a world-class infrastructure.   In a short span of time the school has bloomed both qualitatively and quantitatively in all spheres including academics, sports and co scholastic activities.',
                   style: TextStyle(color: Colors.black.withOpacity(0.6)),
                 ),
               ),
@@ -1754,7 +1764,12 @@ class Quizes extends StatelessWidget {
           PopupMenuButton<Text>(itemBuilder: (context) {
             return [
               PopupMenuItem(
-                child: const Text("Restart"),
+                child: const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Text(
+                      "Restart",
+                      style: TextStyle(fontSize: 20),
+                    )),
                 onTap: () {
                   quizBrain.reset();
                   Navigator.pop(context);
@@ -1783,37 +1798,53 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   List<Icon> scoreKeeper = [];
+  var score = 0;
 
   void checkAnswer(bool userPickedAnswer) {
     bool correctAnswer = quizBrain.getCorrectAnswer();
 
     setState(() {
       if (userPickedAnswer == correctAnswer) {
-        scoreKeeper.add(const Icon(
-          Icons.check,
-          color: Colors.green,
-        ));
+        scoreKeeper.add(
+          const Icon(
+            Icons.check,
+            color: Colors.green,
+          ),
+        );
+        score += 4;
       } else {
-        scoreKeeper.add(const Icon(
-          Icons.close,
-          color: Colors.red,
-        ));
+        scoreKeeper.add(
+          const Icon(
+            Icons.close,
+            color: Colors.red,
+          ),
+        );
+        score -= 2;
       }
       if (quizBrain.isFinished()) {
         Alert(
+          style: const AlertStyle(
+            animationType: AnimationType.fromTop,
+            isCloseButton: false,
+            isOverlayTapDismiss: false,
+            titleStyle: TextStyle(fontWeight: FontWeight.bold),
+            animationDuration: Duration(milliseconds: 400),
+          ),
           context: context,
           title: 'Finished!',
-          desc: 'You\'ve reached the end of the quiz.',
+          desc:
+              'You\'ve reached the end of the quiz. \nYour Total score is $score',
           buttons: [
             DialogButton(
               child: const Text(
-                "Restart",
+                "Back",
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               onPressed: () {
                 setState(() {
                   quizBrain.reset();
                   scoreKeeper = [];
+                  score = 0;
                 });
                 Navigator.of(context, rootNavigator: true).pop();
               },
@@ -1856,12 +1887,17 @@ class _QuizPageState extends State<QuizPage> {
               child: const Text(
                 'True',
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Colors.white,
                   fontSize: 20.0,
                 ),
               ),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue),
+                overlayColor: MaterialStateProperty.all(
+                  Colors.white.withOpacity(0.5),
+                ),
+              ),
               onPressed: () {
-                //The user picked true.
                 checkAnswer(true);
               },
             ),
@@ -1874,15 +1910,28 @@ class _QuizPageState extends State<QuizPage> {
               child: const Text(
                 'False',
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Colors.white,
                   fontSize: 20.0,
                 ),
               ),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue),
+                overlayColor: MaterialStateProperty.all(
+                  Colors.white.withOpacity(0.5),
+                ),
+              ),
               onPressed: () {
-                //The user picked true.
                 checkAnswer(false);
               },
             ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(16),
+          child: Text(
+            "Score: $score",
+            textAlign: TextAlign.right,
+            style: const TextStyle(fontSize: 20),
           ),
         ),
         Row(

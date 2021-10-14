@@ -14,6 +14,18 @@ class QuizBrain {
     Question(
         'Sunita Williams female astronaut spent the maximum time in space?',
         true),
+    Question('Mercury planet has the fastest revolution time', true),
+    Question('An astronaut in outer space will observe sky as White', false),
+    Question(
+        'March planets rotates in a direction opposite to the direction of earth\'s rotation',
+        false),
+    Question(
+        'The average distance (approximate) between the Sun and the Earth is 150 x 106 km',
+        true),
+    Question(
+        'NASA\'s Deep Impact space mission was employed to take detailed pictures of Tempel 1 comet nucleus.',
+        true),
+    Question('March planets has a lesser rotation time than the Earth', false),
   ];
 
   void nextQuestion() {
